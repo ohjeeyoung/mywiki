@@ -1,5 +1,7 @@
+{% extends 'base.html' %}
 {% load static %}
 
+{% block content %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,61 +13,86 @@
 </head>
 
 <body>
-    <!-- 학교 로고 및 학교명-->
-    <img src="{% static 'images/logo.png' %}" width="35" height="35">
-    <span>골드키위고등학교</span>
-    
-    <br><br>
+    <div id="main">
+        <div id="left_main">
+            <div class="aboutContainer">
+                <h4>About</h4>
+                <p>골드키위고등학교 위키입니다. 타인을 저격하는 글 등 부적합한 게시글은 관리자에 의해 삭제조치 될 수 있습니다. 그 외의 재미난 정보들은 언제나 환영입니다:)</p>
+            </div>
+            <div class="contentContainer">
+                <h4>목차</h4>
+                <ol>
+                    <li><a href="#">개요</a></li>
+                    <li><a href="#">학교 연혁</a></li>
+                    <li><a href="#">교훈 및 상징</a></li>
+                    <li><a href="#">학교 특징</a></li>
+                    <li><a href="#">학교 시설</a></li>
+                    <li><a href="#">학교 생활</a></li>
+                </ol>
+            </div>
+            <div class="schoolContainer">
+                <h4>바로가기</h4>
+                <ol class="list-unstyled">
+                    <li><a href="#">oo중 위키</a></li>
+                    <li><a href="#">oo고 위키</a></li>
+                    <li><a href="#">oo고 위키</a></li>
+                </ol>
+            </div>
+        </div>
 
-    <!-- 학교 소개 표-->
-    <table border="1" class="wiki-table">
-        <tr>
-            <td colspan="2" class="table-title">
-                <strong>골드키위고등학교</strong><br>Gold Kiwi High School
-            </td>
-        </tr>
+        <div id="right_main">
+            <table border="1" class="wiki-table">
+                <tr>
+                    <td colspan="2" class="table-title">
+                        <strong>골드키위고등학교</strong><br>Gold Kiwi High School
+                    </td>
+                </tr>
+        
+                <tr>
+                    <td colspan="2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1684110301153!2d126.88997895025189!3d37.527527179706105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9eec884d66e9%3A0x4f047eae398c5b80!2z7L2U7Iqk7Yq47L2UIOyWke2PieygkA!5e0!3m2!1sko!2skr!4v1607090398412!5m2!1sko!2skr" width="560" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">
+                        <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/S0E/image/v91zIz9BSWWH7JV8-wCh17WsTjY.png" title="골키고 학교사진" style="width:550px; height:300px">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td><strong>교훈</strong></td>
+                    <td>키위먹고잘크자🥝</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>교장</strong></td>
+                    <td>박키위</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>주소</strong></td>
+                    <td>서울특별시 골드구 키위동 193</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>홈페이지</strong></td>
+                    <td><a href="">골드키위고등학교 홈페이지</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-        <tr>
-            <td colspan="2">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3164.1684110301153!2d126.88997895025189!3d37.527527179706105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357c9eec884d66e9%3A0x4f047eae398c5b80!2z7L2U7Iqk7Yq47L2UIOyWke2PieygkA!5e0!3m2!1sko!2skr!4v1607090398412!5m2!1sko!2skr" width="560" height="250" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-            </td>
-        </tr>
-        
-        <tr>
-            <td colspan="2">
-                <img src="https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/S0E/image/v91zIz9BSWWH7JV8-wCh17WsTjY.png" title="골키고 학교사진" style="width:550px; height:300px">
-            </td>
-        </tr>
-        
-        <tr>
-            <td><strong>교훈</strong></td>
-            <td>키위먹고잘크자🥝</td>
-        </tr>
-        
-        <tr>
-            <td><strong>교장</strong></td>
-            <td>박키위</td>
-        </tr>
-        
-        <tr>
-            <td><strong>주소</strong></td>
-            <td>서울특별시 골드구 키위동 193</td>
-        </tr>
-        
-        <tr>
-            <td><strong>홈페이지</strong></td>
-            <td><a href="https://www.naver.com">골드키위고등학교 홈페이지</a></td>
-        </tr>
-    </table>
-
-    <!-- 게시글 모음 -->
-    <h1>게시글 모음</h1>
-    {% for post in posts %}
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.update_date }}</p>
-        <p>{{ post.text | truncatechars:100 }}</p>
-    {% endfor %}
-    
+    <div id="bottom_main">
+        <!-- 게시글 모음 -->
+        <h2 class="postContainer">게시글 모음</h2>
+        {% for post in posts %}
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.update_date }}</p>
+            <p>{{ post.text | truncatechars:20 }}<a href="{% url 'detail' post.id %}">...자세히 알아보기</a></p>
+        {% endfor %}
+    </div>
 </body>
 
 </html>
+{% endblock %}
